@@ -8,31 +8,29 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
 
-
-const Login = () => {
+const Signup = () => {
     const history = useHistory();
     const submitHandler = (e) => {
     e.preventDefault();
     history.push('/Gallery')
   }
-  return <div className='login' >
+  return <div className='Signin' >
      
     <Container fluid>
   <Row >
     <Col sm={4} className='text-center'> 
-    <h1 className='sign'>Sign In</h1>
+    <h1 className='sign'>Sign up</h1>
     <p>Free access to our dashboard.</p>
     <form onSubmit={submitHandler}>
       <label htmlFor="">Email Address</label><br />
       <input type="email" placeholder='name@address.com' />
       <br /> <br />
       <label htmlFor="">Password </label>
-      <a className='fp' href="/PasswordValidation" style={{ textDecoration: 'none' }}>Forgot Password</a><br />
       <input type="Password" placeholder='Enter your password' /><br /><br />
-      <Button className='btn' type="submit" variant="primary" size="lg">Sign in</Button>
+      <Button className='btn' type="submit" variant="primary" size="lg">Sign up</Button>
     </form>
     <div>
-      <p><span>Don't have an account yet?</span>  <a href="/Signup" style={{ textDecoration: 'none' }}>Sign up</a></p>
+      <p><span>Already have an account? </span>  <a href="/" style={{ textDecoration: 'none' }}>log in</a></p>
    
     </div>
    
@@ -48,7 +46,6 @@ const Login = () => {
       <Nav className="me-auto">
         <Nav.Link href="/gallery">Gallery</Nav.Link>
         <Nav.Link href="/student">Student</Nav.Link>
-
       </Nav>
     </Navbar.Collapse>
   </Container>
@@ -62,4 +59,4 @@ const Login = () => {
   </div>;
 };
 
-export default Login;
+export default Signup;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -8,31 +7,22 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
 
-
-const Login = () => {
-    const history = useHistory();
-    const submitHandler = (e) => {
-    e.preventDefault();
-    history.push('/Gallery')
-  }
-  return <div className='login' >
+const PasswordValidation = () => {
+    return <div className='login' >
      
     <Container fluid>
   <Row >
     <Col sm={4} className='text-center'> 
-    <h1 className='sign'>Sign In</h1>
-    <p>Free access to our dashboard.</p>
-    <form onSubmit={submitHandler}>
+    <h1 className='password-p'>Password reset</h1>
+    <p>Enter your email to get a password reset link.</p>
+    <form >
       <label htmlFor="">Email Address</label><br />
       <input type="email" placeholder='name@address.com' />
       <br /> <br />
-      <label htmlFor="">Password </label>
-      <a className='fp' href="/PasswordValidation" style={{ textDecoration: 'none' }}>Forgot Password</a><br />
-      <input type="Password" placeholder='Enter your password' /><br /><br />
-      <Button className='btn' type="submit" variant="primary" size="lg">Sign in</Button>
+      <Button className='btn' type="submit" variant="primary" size="lg">Reset Password</Button>
     </form>
     <div>
-      <p><span>Don't have an account yet?</span>  <a href="/Signup" style={{ textDecoration: 'none' }}>Sign up</a></p>
+      <p><span>Remember your password? </span>  <a href="/" style={{ textDecoration: 'none' }}>log in</a></p>
    
     </div>
    
@@ -48,7 +38,6 @@ const Login = () => {
       <Nav className="me-auto">
         <Nav.Link href="/gallery">Gallery</Nav.Link>
         <Nav.Link href="/student">Student</Nav.Link>
-
       </Nav>
     </Navbar.Collapse>
   </Container>
@@ -62,4 +51,4 @@ const Login = () => {
   </div>;
 };
 
-export default Login;
+export default PasswordValidation;

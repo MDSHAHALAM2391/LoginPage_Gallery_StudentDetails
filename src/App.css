@@ -1,5 +1,5 @@
 .sign{
-  margin-top: 100px;
+  margin-top: 150px;
 }
 input {
   width: 100%;
@@ -23,14 +23,20 @@ input {
 label{
   float:left;
 }
+.fp{
+  float: right;
+}
 
 form{
-  padding:20px;
+  padding: 0px 80px;
 }
 
 
 .back-img{
-  background-image: url(./Images/signup5.jpg);
+  background-image: url(./Images/stu6.jpg);
   height: 880px;
   width: 100%;
+}
+.password-p{
+  margin-top: 230px;
 }
