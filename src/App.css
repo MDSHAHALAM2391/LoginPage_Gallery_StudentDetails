@@ -33,7 +33,10 @@ form{
 
 
 .back-img{
-  background-image: url(./Images/stu6.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(./Images/Signup.jpg);
   height: 880px;
   width: 100%;
 }

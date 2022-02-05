@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
-class Card extends Component {
-    render() {
+const Card = ({data, title,image}) => {
+    console.log(data);
         return (
-            <div className='col-11 col-md-6 col-lg-3 mx-0 mb-4'>
-            <a href={`/${this.props.title}`}>
+            <div className='col-11 col-md-6 col-lg-4 mx-0 mb-4'>
+            <a href={`/Category/${title}`} style={{ textDecoration: 'none'}}>
                         <div class="card p-0 overflow-hidden h-100 shadow">
 
-                            <img src={this.props.img}class="card-img-top" alt="..." style={{ height: '200px' }}/>
+                            <img src={image}class="card-img-top" alt="..." style={{ height: '200px' }}/>
                                 <div class="card-body">
-                                 <h5 class="card-title">{this.props.title}</h5>
+                                 <h3 className="text-dark">{title}</h3>
                                 
                           </div>
                          </div>
@@ -18,6 +18,5 @@ class Card extends Component {
                     </div>
             );
         }
-    }
 
 export default Card;
